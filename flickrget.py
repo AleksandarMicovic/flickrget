@@ -20,10 +20,9 @@
 
 
 from BeautifulSoup import BeautifulSoup as bs
-import getopt
-import os
-import sys
 from urllib2 import urlopen
+import getopt
+import sys
 
 SUFFIXES = ['o', 'k', 'h', 'l', 'c', 'z', 'm', 'n', 's', 'q', 'sq', 't']
 
