@@ -1,6 +1,6 @@
 ## About
 
-**flickerget** is a simple Python script that finds the download link for ever image in any user's Flickr set. Every download link is the largest version of the image.
+**flickerget** is a simple Python script that finds the download link for every image in any user's Flickr set. Every download link is the largest version of the image.
 
 It is inspired by the UNIX philosophy of doing one thing only and doing it well.
 
@@ -35,7 +35,7 @@ I recommend putting the script somewhere on your `$PATH` or aliasing it together
 ## Why
 
 Someone somewhere posted a link to an image on Flickr that I thought would have 
-made a fantastic wallpaper. However, when I saw that "downloads" were disabled, 
+made a fantastic wallpaper. However, when I saw that downloads were disabled, 
 I had to manually retrieve that image. This wasn't so bad except that *all* the
 images in that particular set were so good they could have been wallpapers. So,
 I hacked up this small script to do it for me.
