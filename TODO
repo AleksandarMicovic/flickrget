@@ -1,0 +1,4 @@
+- Add verbose flag (python logging module most likely).
+- Migrate to BeautifulSoup 4.
+- Handle photo streams as well.
+- Make into actual proper package if popular enough... 
