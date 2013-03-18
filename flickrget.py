@@ -39,6 +39,7 @@ def get_picture_link(user_id, photo_id):
         # Finally, the highest quality picture.
         soup = bs(response.read())
         photo_link = soup.find(id='allsizes-photo').find('img')['src']
+
         break
 
     return photo_link
@@ -61,15 +62,14 @@ def main(url, output):
     while on_valid_page:
         soup = bs(page)
         thumbnails = soup.findAll('div', 'photo-display-item')
-        photo_ids = [div['data-photo-id'] for div in thumbnails]
 
-        for photo_id in photo_ids:
-            link = get_picture_link(user_id, photo_id)
+        for thumbnail in thumbnails:
+            link = get_picture_link(user_id, thumbnail['data-photo-id'])
 
             if output:
                 links.append(link)
             else:
-                print get_picture_link(user_id, photo_id)
+                print get_picture_link(user_id, thumbnail['data-photo-id'])
 
         current_page += 1
         
@@ -103,8 +103,6 @@ if __name__ == '__main__':
             url = arg
         elif opt in ("-o", "--out"):
             output = arg
-        elif opt in ('-v', '--verbose'):
-            verbose = True
 
     if not opts or help_me or not url:
         print HELP_STRING
